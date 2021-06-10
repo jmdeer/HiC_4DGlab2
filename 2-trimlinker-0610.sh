@@ -3,7 +3,7 @@
 #!/bin/bash
 # trimlinker.sh
 #env: HICPRO
-# 去除linker序列，结果在 /01.trim
+# 脠楼鲁媒linker脨貌脕脨拢卢陆谩鹿没脭脷 /01.trim
 # BL-HiC bridge linker
 names=`ls`
 for name in ${names[@]};
