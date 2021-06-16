@@ -96,6 +96,3 @@ MAX_ITER = 100
 FILTER_LOW_COUNT_PERC = 0.02
 FILTER_HIGH_COUNT_PERC = 0
 EPS = 0.1
-
-###shell command
-###nohup /home/zhoujiaqi/miniconda2/envs/HICPRO/bin/HiC-Pro_2.11.4/bin/HiC-Pro -i ./Rawdata -o ./Clean-result -c 0422config-hicpro-hg38-3-0607.txt   &
