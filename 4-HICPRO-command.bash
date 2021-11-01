@@ -2,10 +2,10 @@
 
 ##Single step
 
-nohup /home/zhoujiaqi/miniconda2/envs/HICPRO/bin/HiC-Pro_2.11.4/bin/HiC-Pro -i ./Cleandata -o ./Clean-result -c 0422config-hicpro-mm10-2.txt   &
+nohup /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/bin/HiC-Pro -i 02trim_data/inCT1/ -o 03hicpro_out/CT1 -c config-hicpronew.txt > nohupCT1.out 2>&1 &
 
-nohup /home/zhoujiaqi/miniconda2/envs/HICPRO/bin/HiC-Pro_2.11.4/bin/HiC-Pro -i ./Rawdata -o ./Clean-result -c 0422config-hicpro-hg38-3-0607.txt  &
+nohup /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/bin/HiC-Pro -i 02trim_data/inCT2/ -o 03hicpro_out/CT2 -c config-hicpronew.txt > nohupCT2.out 2>&1 &
 
 ##Multiple steps. Path is weird
 
-nohup /home/zhoujiaqi/miniconda2/envs/HICPRO/bin/HiC-Pro_2.11.4/bin/HiC-Pro -i /together_sdb/zhoujiaqi/0609HIC/ANNO_XS01KF2021030087_PM-XS01KF2021030087-01_AHG3JGCCX2_2021-06-06_14-50-39/Clean-result/hic_results/data -o ./Clean-result -c 0422config-hicpro-hg38-3-0607.txt -s merge_persample  &
+nohup /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/bin/HiC-Pro -i _data -o ./Clean-result -c 0422config-hicpro-hg38-3-0607.txt -s merge_persample  &
