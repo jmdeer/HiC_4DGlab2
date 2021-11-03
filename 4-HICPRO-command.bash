@@ -6,9 +6,9 @@ nohup /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/bin/HiC-Pro -i 02trim_data/inC
 
 nohup /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/bin/HiC-Pro -i 02trim_data/inCT2/ -o 03hicpro_out/CT2 -c config-hicpronew.txt > nohupCT2.out 2>&1 &
 
-nohup /home/jimengdie/install/HiC-Pro_3.1.0/bin/HiC-Pro -i trimdata/inWAS3/ -o hicpro_out/WAS3 -c config-hicpro.txt > nohupWAS3.out 2>&1 &
+nohup /home/jimengdie/install/HiC-Pro_3.1.0/bin/HiC-Pro -i inWAS3/ -o ../hicpro_out/WAS3 -c config-hicpro.txt > nohupWAS3.out 2>&1 &
 
-nohup /home/jimengdie/install/HiC-Pro_3.1.0/bin/HiC-Pro -i inWAS4/ -o ../hicpro_out/WAS4 -c ../config-hicpro.txt > nohupWAS4.out 2>&1 &
+nohup /home/jimengdie/install/HiC-Pro_3.1.0/bin/HiC-Pro -i inWAS4/ -o ../hicpro_out/WAS4 -c config-hicpro.txt > nohupWAS4.out 2>&1 &
 
 ##Multiple steps. Path is weird
 
