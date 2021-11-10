@@ -1,0 +1,33 @@
+##build_matrixCT.sh
+## Generate contact maps at 5000 resolution ...
+cat ../../03hicpro_out/CT1/hic_results/data/CT1/CT1.allValidPairs ../../03hicpro_out/CT2/hic_results/data/CT2/CT2.allValidPairs | /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/build_matrix --matrix-format upper --binsize 5000 --chrsizes /home/project/alignIndex/Ensembl.Mus_musculus.GRCm38.102/bowtie2/chrom_Ensembl.Mus_musculus.GRCm38.102.sizes --ifile /dev/stdin --oprefix matrix/CT/raw/5000/CT_5000
+## Generate contact maps at 10000 resolution ...
+cat ../../03hicpro_out/CT1/hic_results/data/CT1/CT1.allValidPairs ../../03hicpro_out/CT2/hic_results/data/CT2/CT2.allValidPairs | /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/build_matrix --matrix-format upper --binsize 10000 --chrsizes /home/project/alignIndex/Ensembl.Mus_musculus.GRCm38.102/bowtie2/chrom_Ensembl.Mus_musculus.GRCm38.102.sizes --ifile /dev/stdin --oprefix matrix/CT/raw/10000/CT_10000
+## Generate contact maps at 20000 resolution ...
+cat ../../03hicpro_out/CT1/hic_results/data/CT1/CT1.allValidPairs ../../03hicpro_out/CT2/hic_results/data/CT2/CT2.allValidPairs | /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/build_matrix --matrix-format upper --binsize 20000 --chrsizes /home/project/alignIndex/Ensembl.Mus_musculus.GRCm38.102/bowtie2/chrom_Ensembl.Mus_musculus.GRCm38.102.sizes --ifile /dev/stdin --oprefix matrix/CT/raw/20000/CT_20000
+## Generate contact maps at 40000 resolution ...
+cat ../../03hicpro_out/CT1/hic_results/data/CT1/CT1.allValidPairs ../../03hicpro_out/CT2/hic_results/data/CT2/CT2.allValidPairs | /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/build_matrix --matrix-format upper --binsize 40000 --chrsizes /home/project/alignIndex/Ensembl.Mus_musculus.GRCm38.102/bowtie2/chrom_Ensembl.Mus_musculus.GRCm38.102.sizes --ifile /dev/stdin --oprefix matrix/CT/raw/40000/CT_40000
+## Generate contact maps at 100000 resolution ...
+cat ../../03hicpro_out/CT1/hic_results/data/CT1/CT1.allValidPairs ../../03hicpro_out/CT2/hic_results/data/CT2/CT2.allValidPairs | /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/build_matrix --matrix-format upper --binsize 100000 --chrsizes /home/project/alignIndex/Ensembl.Mus_musculus.GRCm38.102/bowtie2/chrom_Ensembl.Mus_musculus.GRCm38.102.sizes --ifile /dev/stdin --oprefix matrix/CT/raw/100000/CT_100000
+## Generate contact maps at 500000 resolution ...
+cat ../../03hicpro_out/CT1/hic_results/data/CT1/CT1.allValidPairs ../../03hicpro_out/CT2/hic_results/data/CT2/CT2.allValidPairs | /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/build_matrix --matrix-format upper --binsize 500000 --chrsizes /home/project/alignIndex/Ensembl.Mus_musculus.GRCm38.102/bowtie2/chrom_Ensembl.Mus_musculus.GRCm38.102.sizes --ifile /dev/stdin --oprefix matrix/CT/raw/500000/CT_500000
+## Generate contact maps at 1000000 resolution ...
+cat ../../03hicpro_out/CT1/hic_results/data/CT1/CT1.allValidPairs ../../03hicpro_out/CT2/hic_results/data/CT2/CT2.allValidPairs | /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/build_matrix --matrix-format upper --binsize 1000000 --chrsizes /home/project/alignIndex/Ensembl.Mus_musculus.GRCm38.102/bowtie2/chrom_Ensembl.Mus_musculus.GRCm38.102.sizes --ifile /dev/stdin --oprefix matrix/CT/raw/1000000/CT_1000000
+
+## iceCT.sh
+/home/yuanzan/bin/anaconda3/bin/python /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/ice --results_filename matrix/CT/iced/5000/CT_5000_iced.matrix --filter_low_counts_perc 0.02 --filter_high_counts_perc 0 --max_iter 100 --eps 0.1 --remove-all-zeros-loci --output-bias 1 matrix/CT/raw/5000/CT_5000.matrix && echo ice1
+
+/home/yuanzan/bin/anaconda3/bin/python /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/ice --results_filename matrix/CT/iced/10000/CT_10000_iced.matrix --filter_low_counts_perc 0.02 --filter_high_counts_perc 0 --max_iter 100 --eps 0.1 --remove-all-zeros-loci --output-bias 1 matrix/CT/raw/10000/CT_10000.matrix && echo ice2
+
+/home/yuanzan/bin/anaconda3/bin/python /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/ice --results_filename matrix/CT/iced/20000/CT_20000_iced.matrix --filter_low_counts_perc 0.02 --filter_high_counts_perc 0 --max_iter 100 --eps 0.1 --remove-all-zeros-loci --output-bias 1 matrix/CT/raw/20000/CT_20000.matrix && echo ice3
+
+/home/yuanzan/bin/anaconda3/bin/python /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/ice --results_filename matrix/CT/iced/40000/CT_40000_iced.matrix --filter_low_counts_perc 0.02 --filter_high_counts_perc 0 --max_iter 100 --eps 0.1 --remove-all-zeros-loci --output-bias 1 matrix/CT/raw/40000/CT_40000.matrix && echo ice4
+
+/home/yuanzan/bin/anaconda3/bin/python /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/ice --results_filename matrix/CT/iced/100000/CT_100000_iced.matrix --filter_low_counts_perc 0.02 --filter_high_counts_perc 0 --max_iter 100 --eps 0.1 --remove-all-zeros-loci --output-bias 1 matrix/CT/raw/100000/CT_100000.matrix && echo ice5
+
+/home/yuanzan/bin/anaconda3/bin/python /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/ice --results_filename matrix/CT/iced/500000/CT_500000_iced.matrix --filter_low_counts_perc 0.02 --filter_high_counts_perc 0 --max_iter 100 --eps 0.1 --remove-all-zeros-loci --output-bias 1 matrix/CT/raw/500000/CT_500000.matrix && echo ice6
+
+/home/yuanzan/bin/anaconda3/bin/python /home/yuanzan/install/HiC-Pro/HiC-Pro_3.1.0/scripts/ice --results_filename matrix/CT/iced/1000000/CT_1000000_iced.matrix --filter_low_counts_perc 0.02 --filter_high_counts_perc 0 --max_iter 100 --eps 0.1 --remove-all-zeros-loci --output-bias 1 matrix/CT/raw/1000000/CT_1000000.matrix && echo ice7
+
+## combine_allvalidpairsCT.sh
+LANG=en; sort -T tmp -S 50% -k2,2V -k3,3n -k5,5V -k6,6n -m /home/project/zhenggen/samples/03hicpro_out/CT1/hic_results/data/CT1/CT1_Ensembl.Mus_musculus.GRCm38.102.bwt2pairs.validPairs /home/project/zhenggen/samples/03hicpro_out/CT2/hic_results/data/CT2/CT2_Ensembl.Mus_musculus.GRCm38.102.bwt2pairs.validPairs | awk -F"\t" 'BEGIN{c1=0;c2=0;s1=0;s2=0}(c1!=$2 || c2!=$5 || s1!=$3 || s2!=$6){print;c1=$2;c2=$5;s1=$3;s2=$6}' > CT.allValidPairs
