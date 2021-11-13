@@ -1,0 +1,2 @@
+#juicer--hiccups
+java -Xmx8g -jar ~/jimengdie/BL-HiC/juicer/scripts/common/juicer_tools.jar hiccups --cpu --threads 8 -r 5000,10000 -k KR ./hicfiles/WAS.allValidPairs.hic WAS.hiccups --ignore_sparsity
